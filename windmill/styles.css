@@ -168,6 +168,22 @@
     border-bottom: 315px solid var(--dark);
 }
 
+.slice-1:before {
+    top: 240px; 
+    left: 180px;
+    width: 400px; 
+    height: 80px;
+    border-radius: 100% 100% 0 0;
+    background: var(--dark);
+}
+
+.slice-1:after {
+    top: 150px; 
+    left: 390px;
+    border-left: 230px solid transparent;
+    border-right: 520px solid transparent;
+    border-bottom: 175px solid var(--dark);
+}
 
 .mill {
     bottom: 100px;
