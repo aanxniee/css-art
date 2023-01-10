@@ -147,7 +147,7 @@
 
 .slice-3 .right-tree:after {
     top: 15px; 
-    left: -19px;
+    left: 36px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 25px solid var(--medium);
@@ -161,20 +161,77 @@
     border-bottom: 110px solid var(--medium-dark);
 }
 
-.slice-2:before {
-	top: 10px; 
-    left: 39px;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-bottom: 12px solid var(--medium-dark);
+
+.slice-2 .left-tree {
+	top: 41px; 
+    left: -155px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 30px solid var(--medium-dark);
 }
 
-.slice-2:after {
-	top: 13px; 
-    left: 46px;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 10px solid var(--medium-dark);
+.slice-2 .left-tree:before {
+	top: -10px; 
+	left: 19px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 28px solid var(--medium-dark);
+}
+
+.slice-2 .left-tree:after {
+	top: 2px; 
+	left: 8px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 20px solid var(--medium-dark);
+}
+
+.slice-2 .middle-tree {
+	top: 26px; 
+    left: -88px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 15px solid var(--medium-dark);
+}
+
+.slice-2 .middle-tree::before {
+	top: -18px; 
+    left: 21px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 28px solid var(--medium-dark);
+}
+
+.slice-2 .middle-tree::after {
+	top: -13px; 
+    left: 7px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 24px solid var(--medium-dark);
+}
+
+.slice-2 .right-tree {
+	top: 6px; 
+    left: -45px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 17px solid var(--medium-dark);
+}
+
+.slice-2 .right-tree:before {
+	top: -11px; 
+    left: 26px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 15px solid var(--medium-dark);
+}
+
+.slice-2 .right-tree:after {
+	top: -16px; 
+    left: 13px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 24px solid var(--medium-dark);
 }
 
 .slice-1 {
