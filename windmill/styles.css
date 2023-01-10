@@ -4,6 +4,7 @@
 	--medium: #ad5f57;
 	--medium-light: #F0997D;
 	--light: #FFE898;
+	--lightest: #FFFDD0;
 }
 
 .windmill {
@@ -308,6 +309,32 @@
 	background: var(--dark);
 }
 
+.cloud {
+	width: 200px;
+	height: 40px;
+	border-radius: 40px;
+	background: var(--lightest);
+	opacity: .3;
+}
+
+.cloud:before {
+	top: -20px;
+	left: 30px;
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	background: var(--lightest);
+}
+
+.cloud:after {
+	top: -30px;
+	left: 70px;
+	width: 100px;
+	height: 50px;
+	border-radius: 50px;
+	background: var(--lightest);
+}
+
 .mill {
     bottom: 100px;
     right: 130px;
@@ -331,7 +358,7 @@
     width: 8px;
     height: 8px;
     transform: rotate(45deg);
-    background: var(--light);
+    background: var(--medium-light);
 }
 
 .blades {
@@ -390,3 +417,4 @@
         transform: rotate(360deg)
     }
 }
+
