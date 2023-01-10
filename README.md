@@ -1,1 +1,1 @@
-# css-art
+# Pure CSS Art and Animation
