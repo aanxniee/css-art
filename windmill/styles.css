@@ -1,0 +1,84 @@
+:root {
+    --dark: #14222D;
+	--medium-dark: #508BB3;
+	--medium: #6096C4;
+	--medium-light: #649ECD;
+	--light: #B6E2FF;
+}
+
+.windmill {
+    position: relative;
+	width: 800px;
+	height: 500px;
+	overflow: hidden;
+	margin: auto;
+    background: var(--medium-light);
+}
+
+.windmill *,
+.windmill *::after,
+.windmill *::before {
+	content: '';
+	position: absolute;
+}
+
+.sun {
+	top: 145px;
+	left: 245px;
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+	background: var(--light);
+	box-shadow: 0 0  300px 80px var(--light), 0 0 200px 40px var(--light), 0 0 50px 10px var(--light);
+}
+
+.slice-4 {
+	top: 179px; 
+	left: 105px;
+	border-left: 300px solid transparent;
+	border-right: 300px solid transparent;
+	border-bottom: 250px solid var(--medium-light);
+}
+
+.slice-4:before {
+	top: 80px;
+	left: 60px;
+	border-left: 120px solid transparent;
+	border-right: 120px solid transparent;
+	border-bottom: 170px solid var(--medium-light);
+}
+
+.slice-4:after {
+	top: 55px;
+	left: -70px;
+	border-left: 180px solid transparent;
+	border-right: 180px solid transparent;
+	border-bottom: 195px solid var(--medium-light);
+}
+
+.slice-4 div {
+	top: 85px;
+	left: -392px;
+	border-left: 170px solid transparent;
+	border-right: 170px solid transparent;
+	border-bottom: 155px solid var(--medium-light);
+}
+
+.slice-4 div:before {
+	top: -38px;
+	left: -105px;
+	border-left: 220px solid transparent;
+	border-right: 220px solid transparent;
+	border-bottom: 195px solid var(--medium-light);
+}
+
+.slice-4 div:after {
+	top: 20px;
+	left: -115px;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 135px solid var(--medium-light);
+}
+
+
+
