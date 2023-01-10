@@ -161,6 +161,22 @@
     border-bottom: 110px solid var(--medium-dark);
 }
 
+.slice-2:before {
+	top: 10px; 
+    left: 39px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 12px solid var(--medium-dark);
+}
+
+.slice-2:after {
+	top: 13px; 
+    left: 46px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 10px solid var(--medium-dark);
+}
+
 .slice-1 {
     top: 190px; 
     left: 0px;
