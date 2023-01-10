@@ -1,9 +1,9 @@
 :root {
-    --dark: #14222D;
-	--medium-dark: #508BB3;
-	--medium: #6096C4;
-	--medium-light: #649ECD;
-	--light: #B6E2FF;
+    --dark: #2e1b1b;
+	--medium-dark: #7a4242;
+	--medium: #ad5f57;
+	--medium-light: #F0997D;
+	--light: #FFE898;
 }
 
 .windmill {
