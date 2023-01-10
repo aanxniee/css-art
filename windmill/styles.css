@@ -258,6 +258,56 @@
     border-bottom: 175px solid var(--dark);
 }
 
+.slice-1 .left-tree {
+	top: -42px; 
+	left: 40px;
+	border-left: 26px solid transparent;
+	border-right: 26px solid transparent;
+	border-bottom: 120px solid var(--dark);
+}
+
+.slice-1 .left-tree:before {
+	top: 88px; 
+	left: 47px;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 75px solid var(--dark);
+}
+
+.slice-1 .left-tree:after {
+	top: 187px; 
+	left: 461px;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 80px solid var(--dark);
+}
+
+.slice-1 .right-tree {
+	top: 112px; 
+	left: 747px;
+	border-left: 26px solid transparent;
+	border-right: 26px solid transparent;
+	border-bottom: 120px solid var(--dark);
+}
+
+.slice-1 .right-tree:before {
+	top: 14px; 
+	left: -69px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50% 0 50% 50%;
+	transform: rotate(-45deg);
+	background: var(--dark);
+}
+
+.slice-1 .right-tree:after {
+	top: 60px; 
+	left: -49px;
+	height: 20px;
+	width: 10px;
+	background: var(--dark);
+}
+
 .mill {
     bottom: 100px;
     right: 130px;
