@@ -153,6 +153,21 @@
     border-bottom: 25px solid var(--medium);
 }
 
+.slice-2 {
+    top: 342px; 
+    left: 205px;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 110px solid var(--medium-dark);
+}
+
+.slice-1 {
+    top: 190px; 
+    left: 0px;
+    border-right: 400px solid transparent;
+    border-bottom: 315px solid var(--dark);
+}
+
 
 .mill {
     bottom: 100px;
