@@ -31,7 +31,7 @@ body {
     position: relative;
 }
 
-input[type='checkbox'] {
+.open-envelope {
     height: 100%;
     width: 100%;
     z-index: 10;
@@ -39,3 +39,47 @@ input[type='checkbox'] {
     position: absolute;
     opacity: 0;
 }
+
+.open-envelope:checked ~ .envelope-flap {
+    transition: transform 0.25s 0s, z-index 0s 0.25s;
+    transition: rotateX(-180deg);
+    z-index: 0;
+}
+
+.open-envelope:checked ~ .envelope-letter {
+    transform: translateY(-110%);
+    transition: transform 0.25s 0.25s, z-index 0s 0.5s;
+    z-index: 5;
+}
+
+.open-envelope:checked ~ .envelope-letter .letter-content:nth-child(2),
+.open-envelope:checked ~ .envelope-letter .letter-content:nth-child(3) {
+    transition: transform 0.25s 0.5s;
+    transform: rotateX(0deg);
+}
+
+.letter-content {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 14px;
+    text-align: justify;
+
+}
+
+.envelope-back {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 14px;
+    background: repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/100% 5px no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/5px 100% no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 100% 100%/5px 100% no-repeat, var(--envelope-colour);
+    clip-path: polygon(80% 40%, 100% 0, 100% 100%, 0 100%, 0 0, 20% 40%);
+}
+
