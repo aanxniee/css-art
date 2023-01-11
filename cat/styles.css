@@ -1,0 +1,34 @@
+:root {
+    --bg: #93c2ae;
+    --cat: #3b3b3b;
+    --bed: #d993b8;
+    --stand: #c4b2a9;
+}
+
+body {
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    border: 1px solid red;
+}
+
+.main .stand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 20px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: var(--bed);
+    z-index: 2;
+}
