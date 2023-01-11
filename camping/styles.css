@@ -1,0 +1,47 @@
+@use postcss-nested;
+
+:root {
+    --dark-one: #11012b;
+    --dark-two: #160036;
+    --dark-three: #0c002b;
+    --medium-dark: #1e003f;
+    --skewer-light: #babac2;
+    --skewer-medium-light: #a9a8af;
+    --skewer-medium: #948f9f;
+    --skewer-medium-dark: #3d3543;
+    --skewer-dark: #56565a;
+    --fire-dark: #560000;
+    --fire-medium: #fc1244;
+    --fire-light: #fe6749;
+    --fire-lightest: #fea42a;
+    --log-darkest: #671d0e;
+    --log-dark: #501219;
+    --log-medium: #7a3b28;
+    --log-light: #813a2e;
+    --rock-darkest: #000;
+    --rock-dark-one: #3d3543;
+    --rock-dark-two: #604c74;
+    --rock-medium-dark: #877c93;
+    --rock-medium: #5d4b4e;
+    --rock-medium-light: #948f9f;
+    --rock-light: #756581;
+    --grass-light: #390070;
+    --pig-dark: #f45f87;
+    --pig-medium: #f789aa;
+    --pig-light: #ffb6ca;
+    --pig-shadow-one: #e895b6;
+    --pig-shadow-two: #dd507f;
+    --pig-ear: #f98aac;
+    --pig-ear-shadow: #d56595;
+    --pig-tail-light: #e592b2;
+}
+
+body, html {
+
+}
+
+.forest {
+    height: 600px; 
+    width: 800px;
+    background: var(--dark-one);
+}
