@@ -1,6 +1,7 @@
 :root {
     --bg: #111;
     --envelope-colour: #fcf5eb;
+    --darkened: #ede4d8;
     --border-main: #e8f4f8;
     --border-red: #d6a3ac;
     --border-blue: #a3c4d6;
@@ -11,7 +12,7 @@
 }
 
 body {
-    background: var(--bg);
+    background: #111;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -27,7 +28,7 @@ body {
 .envelope {
     width: 500px;
     height: 250px;
-    background: var(--envelope-colour);
+    background: var(--darkened);
     position: relative;
 }
 
@@ -43,9 +44,23 @@ body {
     margin: 0;
 }
 
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75%;
+    transition: transform 0.25s 0.5s, z-index 0s 0.5s;
+    transform-origin: top center;
+    backface-visibility: hidden;
+    background: repeating-linear-gradient(-45deg, var(--border-main), var(--border-main) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--border-main) 20px, var(--border-main) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 0/100% 5px no-repeat, var(--darkened);
+    z-index: 4;
+    clip-path: polygon(5% 40%, 50% 100%, 95% 40%, 100% 0, 0 0); 
+}
+
 .open-envelope:checked ~ .envelope-flap {
     transition: transform 0.25s 0s, z-index 0s 0.25s;
-    transition: rotateX(-180deg);
+    transform: rotateX(180deg);
     z-index: 0;
 }
 
@@ -61,23 +76,8 @@ body {
     transform: rotateX(0deg);
 }
 
-.envelope-flap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 75%;
-    transition: transform 0.25s 0.5s, z-index 0s 0.5s;
-    transform-origin: top center;
-    backface-visibility: hidden;
-    filter: brightness(0.95);
-    background: repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 0/100% 5px no-repeat, var(--envelope-colour);
-    z-index: 4;
-    clip-path: polygon(5% 40%, 50% 100%, 95% 40%, 100% 0, 0 0); 
-}
-
-.envelope-flap--inside {
-    background: var(--envelope-colour);
+.inside {
+    background: var(--darkened);
     backface-visibility: visible;
 }
 
@@ -105,13 +105,13 @@ body {
 
 .letter-content:nth-child(2),
 .letter-content:nth-child(3) {
-  transition: transform 0.25s;
-  top: 100%;
-  transform-origin: top center;
-  transform: rotateX(180deg);
-  backface-visibility: visible;
-  z-index: 2;
-  border-top: 1px solid var(--envelope-colour);
+    transition: transform 0.25s;
+    top: 100%;
+    transform-origin: top center;
+    transform: rotateX(180deg);
+    backface-visibility: visible;
+    z-index: 2;
+    border-top: 1px solid var(--envelope-colour);
 }
 
 .letter-content:nth-child(3) {
@@ -121,7 +121,7 @@ body {
 .signature {
     position: absolute;
     bottom: 20px;
-    right:25px;
+    right: 25px;
     font-size: 17px;
 }
 
@@ -132,18 +132,18 @@ body {
     top: 0;
     left: 0;
     z-index: 3;
-    background: repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/100% 5px no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/5px 100% no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 100% 100%/5px 100% no-repeat, var(--envelope-colour);
+    background: repeating-linear-gradient(-45deg, var(--border-main), var(--border-main) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--border-main) 20px, var(--border-main) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/100% 5px no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/5px 100% no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 100% 100%/5px 100% no-repeat, var(--envelope-colour);
     clip-path: polygon(80% 40%, 100% 0, 100% 100%, 0 100%, 0 0, 20% 40%);
 }
 
 .envelope-back:after {
     height: 100%;
     width: 100%;
-    filter: brightness(0.97);
+    filter: brightness(0.96);
     position: absolute;
     top: 0;
     left: 0;
     content: '';
-    background: repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/100% 5px no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/5px 100% no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 100% 100%/5px 100% no-repeat, var(--envelope-colour);
+    background: repeating-linear-gradient(-45deg, var(--border-main), var(--border-main) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--border-main) 20px, var(--border-main) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/100% 5px no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 0 100%/5px 100% no-repeat, repeating-linear-gradient(-45deg, var(--envelope-colour), var(--envelope-colour) 10px, var(--border-red) 10px, var(--border-red) 20px, var(--envelope-colour) 20px, var(--envelope-colour) 30px, var(--border-blue) 30px, var(--border-blue) 40px) 100% 100%/5px 100% no-repeat, var(--envelope-colour);
     clip-path: polygon(70% 10%, 100% 100%, 0 100%, 30% 10%);
 }
