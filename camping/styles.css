@@ -23,7 +23,7 @@
     --rock-medium: #899384;
     --rock-medium-light: #91958F;
     --rock-light: #A9AFA8;
-    --grass-light: #390070;
+    --grass-light: #0E280A;
     --pig-dark: #f45f87;
     --pig-medium: #f789aa;
     --pig-light: #ffb6ca;
@@ -616,6 +616,51 @@ body, html {
     height: 20px;
 	border-radius: 20px 20px 2px 2px;
 	background: var(--rock-dark-two);
+}
+
+.shadow {
+    top: 545px;
+    left: 442px;
+    width: 26px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--rock-darkest);
+}
+
+.shadow:before {
+    top: 4px;
+    left: 13px;
+    width: 41px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--rock-darkest);
+}
+
+.shadow:after {
+    top: 7px;
+    left: 155px;
+    width: 20px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--rock-darkest);
+}
+
+.bush1 {
+    top: 500px;
+    left: 567px;
+    width: 59px;
+    height: 30px;
+    border-radius: 20px 20px 0 0;
+    background: var(--grass-light);
+}
+
+.bush2 {
+	top: 471px; 
+    left: 138px;
+	width: 98px; 
+    height: 29px;
+	border-radius: 20px 20px 0 0;
+	background: var(--grass-light);
 }
 
 @keyframes fire {
