@@ -44,6 +44,48 @@ body {
     margin: 0;
 }
 
+.heart {
+    position: relative;
+    width: 70px; 
+    height: 60px; 
+    left: 12px; bottom: -160px;
+    animation: heartbeat 1.4s infinite; 
+    margin: auto;
+    z-index: 11;
+}
+
+.heart:before,
+.heart:after {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    width: 26px; 
+    height: 40px; 
+    background-color: var(--border-red); 
+    border-radius: 50px 50px 0 0;
+}
+
+.heart:before {
+    left: 25px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}  
+  
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(1.1); }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 .envelope-flap {
     position: absolute;
     top: 0;
@@ -69,6 +111,11 @@ body {
     transition: transform 0.25s 0.25s, z-index 0s 0.5s;
     z-index: 5;
 }
+
+.open-envelope:checked ~ .heart {
+    transition-delay: 1ms;
+    opacity: 0;
+} 
 
 .open-envelope:checked ~ .envelope-letter .letter-content:nth-child(2),
 .open-envelope:checked ~ .envelope-letter .letter-content:nth-child(3) {
@@ -96,10 +143,10 @@ body {
     height: 100%;
     width: 100%;
     background-color: #fff;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     position: absolute;
-    padding: 14px;
+    padding: 20px;
     text-align: justify;
 }
 
