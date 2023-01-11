@@ -65,6 +65,37 @@ body, html {
     position: absolute;
 }
 
+.tree1 {
+    top: 97px; 
+    left: 393px;
+	width: 14px;
+	border-radius: 100% 100% 0 0;
+	border-bottom: 380px solid var(--dark-one);
+	border-right: 11px solid transparent;
+	border-left: 11px solid transparent;
+}
+
+.tree1:before {
+    top: -6px; 
+    left: 15px;
+    width: 132px; 
+    height: 111px;
+    border-radius: 0 0 100% 0;
+    border-bottom: 30px solid var(--dark-one);
+    border-right: 14px solid var(--dark-one);
+}
+
+.tree1:after {
+    top: -6px; 
+    left: -147px;
+    width: 132px; 
+    height: 111px;
+    border-radius: 0 0 0 100%;
+    border-bottom: 30px solid var(--dark-one);
+    border-left: 14px solid var(--dark-one);
+}
+
+
 .fire {
     top: 200px;
     left: 190px;
