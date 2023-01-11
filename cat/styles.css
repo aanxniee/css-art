@@ -66,7 +66,7 @@ body {
     position: absolute;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
-
+    animation: body 12s none infinite;
 }
 .head {
     content: "";
@@ -90,11 +90,13 @@ body {
     border-right: 12px solid transparent;
     border-bottom: 20px solid var(--cat);
     transform: rotate(-30deg);
+    animation: left-ear 12s both infinite;
 }
 
 .ear + .ear {
     top: -12px;
     left: 30px;
+    animation: right-ear 12s both infinite;
 }
 
 .nose {
@@ -114,12 +116,14 @@ body {
     width: 20px;
     height: 10px;
     transform-origin: right;
+    animation: left-whisker 12s both infinite;
 }
 
 .whiskers:nth-child(2) {
     left: -20px;
     bottom: 12px;
     transform: rotate(180deg);
+    animation: right-whisker 12s both infinite;
 }
 
 .whisker {
@@ -163,3 +167,41 @@ body {
     border-top-right-radius: 40px;
 }
 
+@keyframes body {
+    0% { transform: scaleY(1); }
+    15% { transform: scaleY(1.15); }
+    30% { transform: scaleY(1); }
+    45% { transform: scaleY(1.25); }
+    60% { transform: scaleY(1); }
+    75% { transform: scaleY(1.15); }
+    90% { transform: scaleY(1); }
+    100% { transform: scaleY(1.15); }
+}
+
+@keyframes left-ear {
+    0% { transform: rotate(-20deg); }
+    10% { transform: rotate(-6deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(-15deg); }
+    40% { transform: rotate(-30deg); }
+    50% { transform: rotate(-0deg); }
+    60% { transform: rotate(-0deg); }
+    70% { transform: rotate(-15deg); }
+    80% { transform: rotate(-15deg); }
+    90% { transform: rotate(-6deg); }
+    100% { transform: rotate(-6deg); }
+}
+
+@keyframes right-ear {
+    0% { transform: rotateZ(-16deg); }
+    10% { transform: rotateZ(-16deg); }
+    20% { transform: rotateZ(-19deg); }
+    30% { transform: rotateZ(-19deg); }
+    40% { transform: rotateZ(-30deg); }
+    50% { transform: rotateZ(-19deg); }
+    60% { transform: rotateZ(-30deg); }
+    70% { transform: rotateZ(-19deg); }
+    80% { transform: rotateZ(-19deg); }
+    90% { transform: rotateZ(-30deg); }
+    100% { transform: rotateZ(-19deg); }
+}
