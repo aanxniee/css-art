@@ -1,7 +1,7 @@
 :root {
     --dark-one: #041201;
-    --dark-two: #051a02;
-    --dark-three: #082103;
+    --dark-two: #051501;
+    --dark-three: #071E02;
     --medium-dark: #061a02;
     --skewer-light: #babac2;
     --skewer-medium-light: #a9a8af;
@@ -70,7 +70,7 @@ body, html {
     left: 393px;
 	width: 14px;
 	border-radius: 100% 100% 0 0;
-	border-bottom: 380px solid var(--dark-one);
+	border-bottom: 380px solid var(--dark-three);
 	border-right: 11px solid transparent;
 	border-left: 11px solid transparent;
 }
@@ -81,8 +81,8 @@ body, html {
     width: 132px; 
     height: 111px;
     border-radius: 0 0 100% 0;
-    border-bottom: 30px solid var(--dark-one);
-    border-right: 14px solid var(--dark-one);
+    border-bottom: 30px solid var(--dark-three);
+    border-right: 14px solid var(--dark-three);
 }
 
 .tree1:after {
@@ -91,10 +91,87 @@ body, html {
     width: 132px; 
     height: 111px;
     border-radius: 0 0 0 100%;
-    border-bottom: 30px solid var(--dark-one);
-    border-left: 14px solid var(--dark-one);
+    border-bottom: 30px solid var(--dark-three);
+    border-left: 14px solid var(--dark-three);
 }
 
+.tree2 {
+	top: 60px; 
+    left: 238px;
+	width: 42px;
+	border-bottom: 420px solid var(--dark-two);
+	border-right: 14px solid transparent;
+}
+
+.tree2:before {
+	top: -10px; 
+    left: 43px;
+	width: 37px; 
+    height: 61px;
+	border-radius: 0 0 100% 0;
+	border-bottom: 36px solid var(--dark-two);
+	border-right: 22px solid var(--dark-two);
+}
+
+.tree2:after {
+	top: 90px; 
+    left: -78px;
+	width: 56px; 
+    height: 80px;
+	border-radius: 0 0 0 100%;
+	border-bottom: 36px solid var(--dark-two);
+	border-left: 22px solid var(--dark-two);
+}
+
+.tree3 {
+	top: 50px; 
+    left: 427px;
+	width: 39px;
+	border-bottom: 430px solid var(--dark-two);
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+}
+
+.tree3:before {
+	top: 222px; 
+    left: -285px;
+	width: 16px;
+	border-radius: 20px 20px 0 0;
+	border-bottom: 200px solid var(--dark-one);
+	border-right: 11px solid transparent;
+	border-left: 11px solid transparent;
+}
+
+.tree3:after {
+	top: 0px; 
+    left: -83px;
+	width: 10px;
+	border-bottom: 460px solid var(--dark-three);
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.tree4 {
+	position: absolute;
+	top: 120px;
+	left: 575px;
+	width: 18px;
+	border-bottom: 360px solid var(--dark-one);
+	border-right: 11px solid transparent;
+	border-left: 11px solid transparent;
+}
+
+.tree4:before {
+	content: '';
+	position: absolute;
+	top: -50px;
+    left: -73px;
+	width: 70px;
+	height: 156px;
+	border-radius: 0 0 0 110px;
+	border-bottom: 40px solid var(--dark-one);
+	border-left: 18px solid var(--dark-one);
+}
 
 .fire {
     top: 200px;
