@@ -96,3 +96,41 @@ body {
     top: -12px;
     left: 30px;
 }
+
+.nose {
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    background-color: var(--bed);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+.whiskers {
+    position: absolute;
+    bottom: 5px;
+    left: -36px;
+    width: 20px;
+    height: 10px;
+    transform-origin: right;
+}
+
+.whiskers:nth-child(2) {
+    left: -20px;
+    bottom: 12px;
+    transform: rotate(180deg);
+}
+
+.whisker {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: 1px solid var(--stand);
+    transform-origin: 100% 0;
+    transform: rotate(10deg);
+}
+
+.whisker:last-child {
+    transform: rotate(-20deg);
+}
